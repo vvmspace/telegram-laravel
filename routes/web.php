@@ -17,3 +17,4 @@
 
 Route::get('/', 'TelegramController@getHome');
 Route::get('get-updates',   'TelegramController@getUpdates');
+Route::get('send-hi',   'TelegramController@getSendHiMessage');

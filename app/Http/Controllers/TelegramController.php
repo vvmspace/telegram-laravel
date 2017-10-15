@@ -19,4 +19,12 @@ class TelegramController extends Controller
         $updates = Telegram::getUpdates();
         dd($updates);
     }
+
+    public function getSendHiMessage(){
+    	$dd = Telegram::sendMessage([
+            'chat_id' => env('TELEGRAM_BOT_GROUP_ID'),
+            'text' => 'Hi!'
+        ]);
+        dd($dd);
+    }
 }
